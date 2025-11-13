@@ -19,3 +19,12 @@ a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9
 
 
 
+class Browser:
+    def __init__(self, driver: str):
+        print('Starting up browser')
+        self.chrome_options = Options()
+        self.chrome_options.add_argument('--headless')
+        self.chrome_options.add_argument('--disable=extensions')
+        self.chrome_options.add_argument('--disable-gpu')
+
+        self.browser = webdriver.Chrome(options=self.chrome_options)
