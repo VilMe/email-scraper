@@ -28,3 +28,8 @@ class Browser:
         self.chrome_options.add_argument('--disable-gpu')
 
         self.browser = webdriver.Chrome(options=self.chrome_options)
+
+    def scrape_emails(self, url: str) -> set:
+        print(f'Scraping: "{url}" for emails')
+        self.browser.get(url)
+        page_source: str = self.browser.page_source 
