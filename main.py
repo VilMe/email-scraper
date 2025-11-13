@@ -50,3 +50,8 @@ def main():
     browser = Browser(driver=driver)
 
     emails: set = browser.scrape_emails('https://www.randomlists.com/email-addresses?qty50')
+
+    for i, email in enumerate(emails, start=1):
+        print(i, email, sep=': ')
+
+
