@@ -45,4 +45,8 @@ class Browser:
         print('Closing browswer...')
         self.browser.close()
 
+def main():
+    driver: str = 'chromedriver'
+    browser = Browser(driver=driver)
 
+    emails: set = browser.scrape_emails('https://www.randomlists.com/email-addresses?qty50')
