@@ -33,3 +33,12 @@ class Browser:
         print(f'Scraping: "{url}" for emails')
         self.browser.get(url)
         page_source: str = self.browser.page_source 
+
+
+        list_of_emails: set = set()
+        for re_match in re.finditer(EMAIL_REGEX, page_source):
+            list_of_emails.add(re_match.group())
+
+        return list_of_emails
+    
+    
