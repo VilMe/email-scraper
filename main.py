@@ -41,4 +41,8 @@ class Browser:
 
         return list_of_emails
     
-    
+    def close_browser(self):
+        print('Closing browswer...')
+        self.browser.close()
+
+
