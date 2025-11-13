@@ -55,3 +55,5 @@ def main():
         print(i, email, sep=': ')
 
 
+if __name__ == '__main__':
+    main()
