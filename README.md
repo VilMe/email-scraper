@@ -1,3 +1,3 @@
 # Email Scraper
 
-Scape some emails from a random email generator site :) 
+Scape some emails from any site :) 
